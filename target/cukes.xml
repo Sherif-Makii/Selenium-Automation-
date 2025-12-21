@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="11" time="82.691">
+<testcase classname="Registrations" name="valid registrations" time="7.153">
+<system-out><![CDATA[Given navigate to url website...............................................passed
+When clicks registration button to go to register page......................passed
+And user select gender type.................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "test@example.com" field...............................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_ user could login to the system with valid account" name="valid login" time="5.048">
+<system-out><![CDATA[Given navigate to url website...............................................passed
+And Go to login page........................................................passed
+When Enter valid email and password.........................................passed
+And click on login button...................................................passed
+Then verify that user logged in successfully................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login_ user could login to the system with valid account" name="invalid login" time="4.101">
+<system-out><![CDATA[Given navigate to url website...............................................passed
+And Go to login page........................................................passed
+When Enter invalid email and password.......................................passed
+And click on login button...................................................passed
+Then verify that user didn't logged in successfully.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Currencies Feature" name="verify Euro Symbol (€) is shown on the 4 products displayed in Home page" time="4.355">
+<system-out><![CDATA[When User Select Euro currency from the dropdown list on the top left of home page.passed
+Then Euro Symbol (€) is shown on the 4 products displayed in Home page......passed
+]]></system-out>
+</testcase>
+<testcase classname="user could search using product name or by SKU" name="user could search using product name" time="4.093">
+<failure message="The following asserts failed:&#10;&#9;expected [true] but found [false],&#10;&#9;expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When User write product name "book" on Search Field and click on search button.passed
+Then All Products with product name "book" apears on the web page...........failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org_examples.StepDef.TC03_searchStepDef.all_products_with_product_name_apears_on_the_web_page(TC03_searchStepDef.java:56)
+	at ✽.All Products with product name "book" apears on the web page(file:///C:/Users/Sherif/Desktop/ODC_Round_2_%20Sherif_Mekky/src/main/resources/Featuers/F03_Search.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="user could search using product name or by SKU" name="user could search using product name 2" time="4.05">
+<system-out><![CDATA[When User write product name "laptop" on Search Field and click on search button.passed
+Then All Products with product name "laptop" apears on the web page.........passed
+]]></system-out>
+</testcase>
+<testcase classname="user could search using product name or by SKU" name="user could search using product name 3" time="3.705">
+<system-out><![CDATA[When User write product name "nike" on Search Field and click on search button.passed
+Then All Products with product name "nike" apears on the web page...........passed
+]]></system-out>
+</testcase>
+<testcase classname="user could search using product name or by SKU" name="user could search using product by SKU" time="4.411">
+<system-out><![CDATA[When User write product "SCI_FAITH" on Search Field and click on search button.passed
+And User click on the product in search result..............................passed
+Then The product has the same "SCI_FAITH"...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could search using product name or by SKU" name="user could search using product by SKU 2" time="4.409">
+<system-out><![CDATA[When User write product "APPLE_CAM" on Search Field and click on search button.passed
+And User click on the product in search result..............................passed
+Then The product has the same "APPLE_CAM"...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could search using product name or by SKU" name="user could search using product by SKU 3" time="6.191">
+<system-out><![CDATA[When User write product "SF_PRO_11" on Search Field and click on search button.passed
+And User click on the product in search result..............................passed
+Then The product has the same "SF_PRO_11"...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="From homepage user goto any random sub-category page from the 3 main categories contains sub-categories" name="From homepage user goto any random sub-category page from the 7 main categories contains sub-categories" time="35.008">
+<system-out><![CDATA[When From homepage user select random one of the seven main categories and select any sub-category if it exist.passed
+Then Check the page title(equal or contains) the one you get it while selecting random sub-category.passed
+]]></system-out>
+</testcase>
+</testsuite>
